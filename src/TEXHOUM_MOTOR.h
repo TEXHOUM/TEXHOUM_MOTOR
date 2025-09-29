@@ -1,7 +1,6 @@
 // Библиотека для управления моторами постоянного тока с помощью драйвера L298N
 // Library for controlling DC motors using the L298N driver
 
-// Версия: 1.0
 // Автор библиотеки: Коркин Максим, Пятов Антон
 
 #ifndef TEXHOUM_MOTOR_h
