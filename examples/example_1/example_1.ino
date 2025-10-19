@@ -29,3 +29,10 @@ void stopp() {
   motor3.stop();
   motor4.stop();
 }
+
+void move_forward(int speed, int time) {
+  motor1.move(speed, time);
+  motor2.move(speed, time);
+  motor3.move(-speed, time);
+  motor4.move(-speed, time);
+}

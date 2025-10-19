@@ -7,14 +7,16 @@
 #define TEXHOUM_MOTOR_h
 #include <Arduino.h>
 
-class	MOTOR {
-  public:
-    MOTOR(byte dig, byte pwm);	//	Инициализация (pin digital, pin pwm)
-    void start(int speed);		  //	Запуск мотора (скорость от -255 до 255)
-    void stop();                //  Остановка мотора
-  private:
-    byte _pin_DIG;		//	Номер цифрового пина
-    byte _pin_PWM;		//	Номер ШИМ пина
+class MOTOR {
+public:
+  MOTOR(byte dig, byte pwm);       // Инициализация (pin digital, pin pwm)
+  void start(int speed);           // Запуск мотора (скорость от -100 до 100)
+  void stop();                     // Остановка мотора
+  void move(int speed, int time);  // Запуск мотора на заданное время (скорость от -100 до 100, время в миллисекундах)
+private:
+  byte _pin_DIG;  //	Номер цифрового пина
+  byte _pin_PWM;  //	Номер ШИМ пина
+  int _speed;     //  Текущая заданная скорость
 };
 
 extern MOTOR motor1;
